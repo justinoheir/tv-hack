@@ -23,3 +23,20 @@ SR&ED-eligible by itself. The eligible parts are the measurement methodology and
 measurement round.
 
 **Results.** _Pending baseline measurements._
+
+## 2026-10-31: Ether TV software design
+
+**Objective.** One system delivering a fast launcher, media hub, smart-home dashboard, phone
+control and non-store apps on Tizen TVs, without partner-level platform access.
+
+**New technological uncertainties** (detail in `docs/design/architecture.md` §7):
+U1 public-certificate privilege limits (inputs, colour keys) · U2 overlays above other apps ·
+U3 WSS to a LAN host with a public certificate in the TV web runtime · U4 achievable key-to-paint
+latency on the U8000F · U5 AVPlay vs HTML5 video codec/perf coverage · U6 WebSocket survival
+while the shell is in the background.
+
+**Approach.** Each uncertainty has a throwaway spike (roadmap Phase 0) with a measurable
+pass/fail before dependent features are built. Architecture works around the platform's
+inability to accept inbound connections by having the TV connect out to a hub (ADR-0002).
+
+**Results.** _Pending spikes._

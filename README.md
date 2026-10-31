@@ -44,12 +44,14 @@ apps/ether-launcher/     Tizen web app (HTML/JS), with logic kept separate from 
   src/ui/                DOM rendering only
   src/services/          Side effects: launching apps, analytics hook (off by default)
   test/                  node:test unit + integration tests
+packages/protocol/       Shared, validated TV↔hub↔phone message protocol (tested)
 scripts/                 Build/sign/install helpers that wrap the Tizen CLI
 network/                 Conservative Pi-hole/AdGuard blocklist for Samsung ads/ACR
 ```
 
 ## Documentation index
 
+- **[Ether TV software design](docs/design/README.md)**: architecture, ADRs, hub API, roadmap
 - [Overview, architecture and limits](docs/00-overview.md)
 - [Security and privacy review](docs/security-privacy.md)
 - [QA test cases](docs/qa-test-cases.md)
