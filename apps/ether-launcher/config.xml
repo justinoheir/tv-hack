@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:tizen="http://tizen.org/ns/widgets"
+        id="http://intoether.co/etherlauncher" version="0.1.0" viewmodes="maximized">
+  <tizen:application id="EthrLnch01.EtherLauncher" package="EthrLnch01" required_version="6.0"/>
+  <content src="index.html"/>
+  <name>Ether Launcher</name>
+  <feature name="http://tizen.org/feature/screen.size.normal.1080.1920"/>
+  <!-- Least privilege: only what we use. application.launch lets us open other apps. -->
+  <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+  <tizen:profile name="tv-samsung"/>
+  <tizen:setting screen-orientation="landscape" context-menu="disable"
+                 background-support="disable" encryption="disable"
+                 install-location="auto" hwkey-event="enable"/>
+  <!-- CSP: no remote scripts; network access only for URL tiles opened in the browser. -->
+  <tizen:content-security-policy>default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:</tizen:content-security-policy>
+</widget>

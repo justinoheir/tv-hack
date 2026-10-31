@@ -1,0 +1,26 @@
+/* Designed for 1920x1080 at 10-foot viewing distance. Large type, high contrast, obvious focus. */
+:root {
+  --bg: #0e1116;
+  --tile: #1c2230;
+  --text: #f2f4f8;
+  --muted: #9aa4b5;
+  --focus: #4f8cff;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; }
+body { padding: 64px 96px; overflow: hidden; } /* TV overscan-safe margins */
+header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 48px; }
+h1 { font-size: 48px; margin: 0; font-weight: 600; }
+#clock { font-size: 40px; color: var(--muted); }
+#grid { display: grid; grid-template-columns: repeat(var(--columns, 4), 1fr); gap: 32px; }
+.tile {
+  height: 200px; border-radius: 16px; background: var(--tile);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 36px; font-weight: 500;
+  /* transform + outline only: cheap for the TV GPU, no layout reflow on focus */
+  transition: transform 120ms ease-out;
+  outline: 6px solid transparent;
+}
+.tile.focused { transform: scale(1.06); outline-color: var(--focus); }
+.empty { font-size: 32px; color: var(--muted); }
+#status { position: fixed; bottom: 48px; left: 96px; font-size: 32px; color: var(--muted); margin: 0; }

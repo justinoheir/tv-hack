@@ -1,0 +1,21 @@
+# Conservative Samsung Smart TV ad/telemetry blocklist (Pi-hole / AdGuard Home format)
+#
+# Scope: ACR (content recognition) and ad-serving only. Deliberately small.
+# Before blocking anything else, watch YOUR TV's query log for a day.
+#
+# DO NOT add: firmware update, app store, account, or streaming/DRM licence
+# domains. Blocking those breaks updates and apps.
+#
+# Hostnames change over time. Check each one against your query log; if
+# something breaks right after you add an entry, remove it.
+
+# ACR / Viewing Information Services
+samsungacr.com
+log-config.samsungacr.com
+
+# Advertising
+samsungads.com
+config.samsungads.com
+ads.samsungads.com
+ad.samsungadhub.com
+samsungadhub.com

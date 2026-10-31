@@ -1,0 +1,24 @@
+# Personal / device-identifying records
+docs/tv-profile.md
+docs/speed-log.md
+
+# Signing credentials: never commit
+*.p12
+*.pfx
+SamsungCertificate/
+.tizen-cert/
+
+# Build output
+*.wgt
+apps/*/.buildResult/
+apps/*/dist/
+node_modules/
+
+# Firmware images: copyrighted, large
+*.img
+*.bin
+*.msd
+*.zip
+fw-research/
+
+.DS_Store
